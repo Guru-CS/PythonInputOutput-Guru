@@ -34,8 +34,6 @@ while (checker < TARGET_AMOUNT):
         monthly_VAR = 0
     checker = checker*(1+INTEREST/12)
     monthly_VAR += 1
-
-    checker = checker/((1+INFLATION/12)**(YEARS*12))
     month_to_Target += 1
 print(f" The future value would be: ${FUTURE_VALUE:.2f}")
 print(f" The real, purchasing power, would be: ${REAL_VALUE:.2f}")
