@@ -1,5 +1,6 @@
 print("|{:^60}|".format(":This is your Saving Account Interest Calculator:"))
 repeat = True
+git_check = True
 checker = 0
 month_to_Target = 0
 monthly_VAR = 0
