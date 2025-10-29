@@ -1,9 +1,16 @@
+'''
+Name: Gurusaran Sathish
+Project: Input, Output, Processing
+Extra: Was able to format my text without use of fstrings. 
+'''
+#Prints the string in center of 60 space field
 print("|{:^60}|".format(":This is your Saving Account Interest Calculator:"))
 repeat = True
-git_check = True
+#variables are calculated here
 checker = 0
 month_to_Target = 0
 monthly_VAR = 0
+# Input is all gathered as float)
 DEPOSIT = float(input("Enter Deposit: "))
 MONTHLY = float(input("How Often Deposited in Months, else 0: "))
 if MONTHLY == 0:
@@ -15,7 +22,7 @@ TARGET_AMOUNT = float(input("Enter Target Amount of Money: "))
 INFLATION = 0.02
 FUTURE_VALUE = 0
 REAL_VALUE = 0
-if repeat:
+if repeat: #Checks if they deposit monthly and perform calculations accordingly
     FUTURE_VALUE += DEPOSIT
     for i in range(int(YEARS)*12):
         if MONTHLY == monthly_VAR:
@@ -25,11 +32,11 @@ if repeat:
         monthly_VAR += 1
 
     REAL_VALUE = FUTURE_VALUE/((1+INFLATION/12)**(YEARS*12))
-else:
+else: 
     FUTURE_VALUE = DEPOSIT*(1+INTEREST)**YEARS
     REAL_VALUE = FUTURE_VALUE/(1+INFLATION)**YEARS
 checker += REAL_VALUE
-while (checker < TARGET_AMOUNT):
+while (checker < TARGET_AMOUNT): #Adapted version of prev calculation to help calculate how long to reach target
     if MONTHLY == monthly_VAR:
         checker += DEPOSIT
         monthly_VAR = 0
